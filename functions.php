@@ -1,4 +1,4 @@
-<?php
+<?php // (C) Copyright Bobbing Wide 2013, 2014
 
 
 add_action( 'widgets_init', 'oik2012_widgets_init', 11 );
@@ -57,6 +57,35 @@ function oik2012_remove_menus(){
     //remove_menu_page( 'events' );
   }
 }
+
+/**
+ * Create a version specific Menu toggle section
+ * 
+ * Prior to v1.5 of TwentyTwelve we use an h3 tag, from 1.5 it's a button.
+ * See TRAC #28224 https://core.trac.wordpress.org/ticket/28224
+ *
+ * TwentyTwelve version  Tag for menu-toggle
+ * --------------------  -------------------
+ * 1.5 and higher        button
+ * up to 1.4             h3
+ *
+ * Note: This may not work on a site which has been upgraded through beta versions of WordPress.
+ */  
+function oik2012_menu_toggle() {
+  $installed_theme = wp_get_theme( "twentytwelve" );
+  if ( $installed_theme->exists() ) {
+    $version =  $installed_theme->get('Version');
+    if ( version_compare( $version, 1.5, 'ge' ) ) {
+    ?>
+			<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
+    <?php } else { ?>
+      
+			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
+    <?php
+    }
+  }
+}
+
 
 
 

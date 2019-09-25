@@ -3,13 +3,13 @@ Theme Name: oik2012
 Template: twentytwelve
 Theme URI: http://oik-plugins.com/oik-themes/oik2012
 Author: the WordPress team & bobbingwide
-Author URI: http://www.bobbingwide.com
+Author URI: http://www.oik-plugins.com/author/bobbingwide
 Description: The oik2012 theme for WordPress is a child theme of Twenty Twelve with footer widgets and no custom styling for TinyMCE
-Version: 0.2
+Version: 0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: oik, one-column, two-columns, left-sidebar, right-sidebar, footer-sidebars, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
-Text Domain: twentyeleven
+Text Domain: twentytwelve
 */
  
 @import url('../twentytwelve/style.css');
