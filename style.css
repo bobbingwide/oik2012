@@ -1,0 +1,69 @@
+/*
+Theme Name: oik2012
+Template: twentytwelve
+Theme URI: http://oik-plugins.com/oik-themes/oik2012
+Author: the WordPress team & bobbingwide
+Author URI: http://www.bobbingwide.com
+Description: The oik2012 theme for WordPress is a child theme of Twenty Twelve with footer widgets and no custom styling for TinyMCE
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: oik, one-column, two-columns, left-sidebar, right-sidebar, footer-sidebars, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentyeleven
+*/
+ 
+@import url('../twentytwelve/style.css');
+
+.widget-area .widget h3 {
+  margin-bottom:0;
+}
+
+#footerwidgets {
+ width:100%;
+}
+#footerwidgets p {
+ padding-bottom: .5em;
+}
+#footerwidgets li, #footerwidgets p  {
+ padding-bottom: .5em;
+ font-size:80%;
+ line-height:1.1em;
+}
+#footer-left {
+ width:30%;
+ float:left;
+ padding-right:2.5%;
+}
+#footer-middle {
+ width:30%;
+ float:left;
+ padding-left:2.5%;
+ padding-right: 2.5%;
+}
+#footer-right {
+ width:30%;
+ float:right;
+ padding-left:2.5%;
+} 
+
+.site-content article {
+  border-bottom:none;
+}
+@media only screen
+and (max-width:481px) {
+
+   #footer-right, #footer-middle, #footer-left {
+     float:none;
+     padding-left:0;
+     padding-right:0;
+     padding-top:1em;
+     width:100%;
+   }
+}
+
+.the-social-link {
+  text-align:center;
+}
+.the-social-link img {
+  padding:5px;
+}
