@@ -45,6 +45,19 @@ function oik2012_footer_widgets() {
   }
 }
 
+/**
+ * @link http://www.mojowill.com/developer/quick-tip-hide-jetpack-from-non-admins/
+ * @link http://wordpress.org/support/topic/hide-events-menu-from-users-without-capabilities
+ */
+add_action( 'admin_menu', 'oik2012_remove_menus' );
+ 
+function oik2012_remove_menus(){
+  if( !current_user_can( 'add_users' ) ){
+    remove_menu_page( 'jetpack' );
+    //remove_menu_page( 'events' );
+  }
+}
+
 
 
 
